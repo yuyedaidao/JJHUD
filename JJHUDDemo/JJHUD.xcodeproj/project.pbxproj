@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21F757491FD930260018CA58 /* YQHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 21F757471FD930260018CA58 /* YQHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21F7574C1FD930270018CA58 /* YQHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F757451FD930260018CA58 /* YQHUD.framework */; };
+		21F7574D1FD930270018CA58 /* YQHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 21F757451FD930260018CA58 /* YQHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		21F757521FD9303F0018CA58 /* JJHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C321B51E73A994007BA7CC /* JJHUD.swift */; };
 		4127CCF41E67F966001A71BE /* PatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127CCF31E67F966001A71BE /* PatternView.swift */; };
 		4162624F1E65792B001CCA0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4162624E1E65792B001CCA0F /* AppDelegate.swift */; };
 		416262511E65792B001CCA0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416262501E65792B001CCA0F /* ViewController.swift */; };
@@ -16,7 +20,34 @@
 		41C321B71E73A9F3007BA7CC /* JJHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C321B51E73A994007BA7CC /* JJHUD.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		21F7574A1FD930270018CA58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 416262431E65792B001CCA0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21F757441FD930260018CA58;
+			remoteInfo = YQHUD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		21F757511FD930270018CA58 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				21F7574D1FD930270018CA58 /* YQHUD.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		21F757451FD930260018CA58 /* YQHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YQHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21F757471FD930260018CA58 /* YQHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YQHUD.h; sourceTree = "<group>"; };
+		21F757481FD930260018CA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4127CCF31E67F966001A71BE /* PatternView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternView.swift; sourceTree = "<group>"; };
 		4162624B1E65792B001CCA0F /* JJHUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJHUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4162624E1E65792B001CCA0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,21 +60,39 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		416262481E65792B001CCA0F /* Frameworks */ = {
+		21F757411FD930260018CA58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		416262481E65792B001CCA0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21F7574C1FD930270018CA58 /* YQHUD.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21F757461FD930260018CA58 /* YQHUD */ = {
+			isa = PBXGroup;
+			children = (
+				21F757471FD930260018CA58 /* YQHUD.h */,
+				21F757481FD930260018CA58 /* Info.plist */,
+			);
+			path = YQHUD;
+			sourceTree = "<group>";
+		};
 		416262421E65792B001CCA0F = {
 			isa = PBXGroup;
 			children = (
 				41C321B41E73A994007BA7CC /* Source */,
 				4162624D1E65792B001CCA0F /* JJHUD */,
+				21F757461FD930260018CA58 /* YQHUD */,
 				4162624C1E65792B001CCA0F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				4162624B1E65792B001CCA0F /* JJHUD.app */,
+				21F757451FD930260018CA58 /* YQHUD.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,7 +130,36 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		21F757421FD930260018CA58 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21F757491FD930260018CA58 /* YQHUD.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		21F757441FD930260018CA58 /* YQHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21F7574E1FD930270018CA58 /* Build configuration list for PBXNativeTarget "YQHUD" */;
+			buildPhases = (
+				21F757401FD930260018CA58 /* Sources */,
+				21F757411FD930260018CA58 /* Frameworks */,
+				21F757421FD930260018CA58 /* Headers */,
+				21F757431FD930260018CA58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YQHUD;
+			productName = YQHUD;
+			productReference = 21F757451FD930260018CA58 /* YQHUD.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		4162624A1E65792B001CCA0F /* JJHUD */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4162625D1E65792B001CCA0F /* Build configuration list for PBXNativeTarget "JJHUD" */;
@@ -88,10 +167,12 @@
 				416262471E65792B001CCA0F /* Sources */,
 				416262481E65792B001CCA0F /* Frameworks */,
 				416262491E65792B001CCA0F /* Resources */,
+				21F757511FD930270018CA58 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				21F7574B1FD930270018CA58 /* PBXTargetDependency */,
 			);
 			name = JJHUD;
 			productName = JJHUD;
@@ -108,9 +189,15 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "晋先森";
 				TargetAttributes = {
+					21F757441FD930260018CA58 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = QXPHWM9EW2;
+						ProvisioningStyle = Automatic;
+					};
 					4162624A1E65792B001CCA0F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6RP225P6JQ;
+						DevelopmentTeam = QXPHWM9EW2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -129,11 +216,19 @@
 			projectRoot = "";
 			targets = (
 				4162624A1E65792B001CCA0F /* JJHUD */,
+				21F757441FD930260018CA58 /* YQHUD */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		21F757431FD930260018CA58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		416262491E65792B001CCA0F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,6 +242,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		21F757401FD930260018CA58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21F757521FD9303F0018CA58 /* JJHUD.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		416262471E65792B001CCA0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -159,6 +262,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21F7574B1FD930270018CA58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21F757441FD930260018CA58 /* YQHUD */;
+			targetProxy = 21F7574A1FD930270018CA58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		416262521E65792B001CCA0F /* Main.storyboard */ = {
@@ -180,6 +291,76 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		21F7574F1FD930270018CA58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QXPHWM9EW2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = YQHUD/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xt.YQHUD;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		21F757501FD930270018CA58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QXPHWM9EW2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = YQHUD/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xt.YQHUD;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		4162625B1E65792B001CCA0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -276,34 +457,49 @@
 		4162625E1E65792B001CCA0F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6RP225P6JQ;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = QXPHWM9EW2;
 				INFOPLIST_FILE = JJHUD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jinxiansen.JJHUD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		4162625F1E65792B001CCA0F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6RP225P6JQ;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = QXPHWM9EW2;
 				INFOPLIST_FILE = JJHUD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jinxiansen.JJHUD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		21F7574E1FD930270018CA58 /* Build configuration list for PBXNativeTarget "YQHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21F7574F1FD930270018CA58 /* Debug */,
+				21F757501FD930270018CA58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		416262461E65792B001CCA0F /* Build configuration list for PBXProject "JJHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

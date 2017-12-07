@@ -8,16 +8,16 @@
 
 import UIKit
 
-private let delayTime : TimeInterval = 1.5
-private let padding : CGFloat = 12
-private let cornerRadius : CGFloat = 13.0
-private let imageWidth_Height : CGFloat = 36
+public let JJDelayTime : TimeInterval = 1.5
+fileprivate let padding : CGFloat = 12
+fileprivate let cornerRadius : CGFloat = 13.0
+fileprivate let imageWidth_Height : CGFloat = 36
 
-private let textFont = UIFont.systemFont(ofSize: 14)
+fileprivate let textFont = UIFont.systemFont(ofSize: 14)
 
-private let keyWindow = UIApplication.shared.keyWindow!
+fileprivate let keyWindow = UIApplication.shared.keyWindow!
 
-private let JIdentifier = "JScreenView"
+fileprivate let JIdentifier = "JScreenView"
 
 enum JJHUDType {
     case success // image + text
@@ -30,7 +30,7 @@ enum JJHUDType {
 
 public class JJHUD:UIView {
 
-    private var delay : TimeInterval = delayTime
+    private var delay : TimeInterval = JJDelayTime
     private var imageView :UIImageView?
     private var activityView : UIActivityIndicatorView?
     private var type : JJHUDType?
@@ -203,7 +203,7 @@ public class JJHUD:UIView {
         })
     }
 
-    public func hide(delay:TimeInterval = delayTime) {
+    public func hide(delay:TimeInterval = JJDelayTime) {
         JJHUD.asyncAfter(duration: delay) {
             self.hide()
         }
@@ -222,7 +222,7 @@ public class JJHUD:UIView {
         }
     }
 
-    public static func hide(delay:TimeInterval = delayTime) {
+    public static func hide(delay:TimeInterval = JJDelayTime) {
         asyncAfter(duration: delay) {
             hide()
         }
@@ -254,17 +254,15 @@ extension String {
                                      constrainedToSize size:CGSize) -> CGSize {
         var textSize:CGSize!
         if size.equalTo(CGSize.zero) {
-            let attributes = NSDictionary(object: font,
-                                          forKey: NSFontAttributeName as NSCopying)
-            textSize = self.size(attributes: attributes as? [String : AnyObject])
+            let attributes = [NSAttributedStringKey.font: font]
+            textSize = self.size(withAttributes: attributes)
         } else {
             let option = NSStringDrawingOptions.usesLineFragmentOrigin
-            let attributes = NSDictionary(object: font,
-                                          forKey: NSFontAttributeName as NSCopying)
+            let attributes = [NSAttributedStringKey.font: font]
 
             let stringRect = self.boundingRect(with: size,
                                                options: option,
-                                               attributes: attributes as? [String : AnyObject],
+                                               attributes: attributes,
                                                context: nil)
             textSize = stringRect.size
         }
@@ -315,7 +313,7 @@ private class JJHUDImage {
         checkmarkShapePath.addArc(withCenter: CGPoint(x: 18, y: 18),
                                   radius: 17.5,
                                   startAngle: 0,
-                                  endAngle: CGFloat(M_PI*2),
+                                  endAngle: CGFloat(Double.pi*2),
                                   clockwise: true)
         checkmarkShapePath.close()
 
@@ -346,7 +344,7 @@ private class JJHUDImage {
             checkmarkShapePath.addArc(withCenter: CGPoint(x: 18, y: 27),
                                       radius: 1,
                                       startAngle: 0,
-                                      endAngle: CGFloat(M_PI*2),
+                                      endAngle: CGFloat(Double.pi*2),
                                       clockwise: true)
             checkmarkShapePath.close()
 
